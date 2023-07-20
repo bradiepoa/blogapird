@@ -1,6 +1,6 @@
  
 
- => FREE Dango react blog licensed by Bradiepoa
+ => FREE Dango react blog licensed by Bradie poa
 
  All free react django blog by bradie are licensed under a Creative Commons Attribution 4.0 International License which means you are not allowed to remove the author’s credit link/attribution link/backlink.
 
