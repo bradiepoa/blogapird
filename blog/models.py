@@ -12,6 +12,7 @@ class Category(models.Model):
 
 class Post(models.Model):
 
+	# this is to by default get data without doing any querry
 	class PostObjects(models.Manager):
 		def get_queryset(self):
 			return super().get_queryset() .filter(status='published')
