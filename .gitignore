@@ -1,4 +1,4 @@
 brad
 db.sqlite3
 htmlcov
-blog/tests.py
+tests.py
