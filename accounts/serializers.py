@@ -19,7 +19,12 @@ class UserRegisterSerializer(serializers.ModelSerializer):
         return attrs
     
     def create(self,validate_data):
-
-        return super().create(validate_data)
+        user=User.objects.create_user(
+            email=validate_data['email'],
+            first_name=validate_data.get('first_name'),
+            last_name=validate_data.get('last_name'),
+            password=validate_data.get('password')
+        )
+        return user
     
 
