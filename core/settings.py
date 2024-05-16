@@ -30,7 +30,7 @@ MIDDLEWARE = [
 
     'corsheaders.middleware.CorsMiddleware',
     # other middleware
-    
+
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -69,6 +69,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+AUTH_USER_MODEL = "accounts.User"
+
 
 
 # Password validation
