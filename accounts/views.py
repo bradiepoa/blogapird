@@ -3,6 +3,7 @@ from rest_framework.generics import GenericAPIView
 from .serializers import UserRegisterSerializer
 from rest_framework.response import Response
 from rest_framework import status
+from.utils import send_code_to_user
 # Create your views here.
 
 class ResgiterUserView(GenericAPIView):
@@ -17,7 +18,7 @@ class ResgiterUserView(GenericAPIView):
             # and saving in the db
             serializer.save()
             user=serializer.data
-            # send email function user(email)
+            send_code_to_user(user['email'])
             return Response({
                 'data':user,
                 'message':f'hi {user.get("first_name", "User")}, thanks for signing up passcode is '
