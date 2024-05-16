@@ -11,9 +11,12 @@ class UserRegisterSerializer(serializers.ModelSerializer):
         model=User
         fields = ['email','first_name','last_name','password','password2']
     
-    def validate(self, altrs):
-
-        return super().validate(altrs)
+    def validate(self, attrs):
+        password = attrs.get('password','')
+        password2 = attrs.get('password2','')
+        if password != password2:
+            raise serializers.ValidationError("Password do not match please!")
+        return attrs
     
     def create(self,validate_data):
 
